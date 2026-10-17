@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Weiterleitung zur Partner-App – BiteBack</title>
+    <script>
+        // Bis Okt 2026 lief die Partner-Web-App direkt auf bitebackforpartners.at.
+        // Alle alten Adressen (Lesezeichen, Mail-Links wie /ResetPassword) → gleiche Adresse unter app.
+        location.replace("https://app.bitebackforpartners.at" + location.pathname + location.search + location.hash);
+    </script>
+    <style>
+        body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+               color: #1b2430; text-align: center; padding: 64px 22px; }
+        a { color: #009E6C; font-weight: 600; }
+    </style>
+</head>
+
+<body>
+    <p>Die Partner-App ist umgezogen.</p>
+    <p><a href="https://app.bitebackforpartners.at/">Weiter zur Partner-App</a></p>
+</body>
+
+</html>

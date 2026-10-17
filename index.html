@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiteBack for Partners – Login und Infos für Gastronomen</title>
+    <meta name="description" content="Das digitale Treueprogramm für Restaurants, Cafés und Bäckereien. Zum Partner-Login oder mehr über BiteBack for Partners erfahren.">
+    <link rel="canonical" href="https://bitebackforpartners.at/">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <script>
+        // Login-/Passwort-Links aus Supabase-Mails (#access_token, type=recovery …) und alte
+        // Lesezeichen gehören zur Partner-Web-App, die seit Okt 2026 unter app. läuft.
+        (function () {
+            var h = location.hash || "";
+            if (/access_token|refresh_token|type=|error_code/.test(h) || /[?&](code|token)=/.test(location.search)) {
+                location.replace("https://app.bitebackforpartners.at" + location.pathname + location.search + h);
+            }
+        })();
+    </script>
+    <style>
+        :root {
+            --green: #009E6C;
+            --primary: #22E27C;
+            --ink: #1b2430;
+            --muted: #5b6675;
+            --line: #e6e9ee;
+            --bg: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+        html { -webkit-text-size-adjust: 100%; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        header.topbar {
+            display: flex; align-items: center; gap: 12px;
+            padding: 18px 22px; border-bottom: 1px solid var(--line);
+            max-width: 820px; margin: 0 auto;
+        }
+        header.topbar img { height: 40px; width: 40px; }
+
+        .wrap { max-width: 820px; margin: 0 auto; padding: 48px 22px 72px; text-align: center; }
+
+        h1 { font-size: clamp(1.6rem, 7vw, 2.3rem); margin: 0 0 12px; letter-spacing: -.02em; line-height: 1.2; }
+        .intro { color: var(--muted); margin: 0 auto 32px; max-width: 540px; font-size: 1.05rem; }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 40px; }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            width: 16rem; max-width: 100%;
+            padding: 14px 18px; border-radius: 14px; font-weight: 600; text-decoration: none;
+        }
+        .btn.primary { background: var(--primary); color: #fff; }
+        .btn.primary:hover { background: var(--green); }
+        .btn.secondary { border: 2px solid var(--primary); color: var(--green); }
+        .btn.secondary:hover { background: #f1fdf6; }
+
+        .apps { border-top: 1px solid var(--line); padding-top: 28px; }
+        .apps p { color: var(--muted); margin: 0 0 16px; }
+        .stores { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .store {
+            display: inline-flex; align-items: center; gap: 10px;
+            width: 16rem; max-width: 100%; justify-content: center;
+            padding: 12px 18px; border-radius: 14px;
+            background: var(--ink); color: #fff; text-decoration: none; font-weight: 600;
+        }
+        .store img { width: 24px; height: 24px; }
+
+        .contact { color: var(--muted); font-size: .95rem; margin-top: 32px; }
+        .contact a { color: var(--green); font-weight: 600; text-decoration: none; }
+
+        footer.legal {
+            border-top: 1px solid var(--line);
+            max-width: 820px; margin: 0 auto; padding: 18px 22px;
+            color: var(--muted); font-size: .88rem; text-align: center;
+        }
+        footer.legal a { color: var(--muted); margin: 0 8px; text-decoration: none; }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <img src="/assets/logo.svg" alt="BiteBack Logo" width="40" height="40">
+        <strong>BiteBack for Partners</strong>
+    </header>
+
+    <main class="wrap">
+        <h1>Das digitale Treueprogramm für dein Lokal</h1>
+        <p class="intro">
+            Mit BiteBack belohnst du deine Stammgäste, ganz ohne Stempelkarten. Gäste scannen ihren Beleg,
+            sammeln Bites und lösen sie bei dir ein. Du legst die Belohnungen selbst fest.
+        </p>
+
+        <div class="actions">
+            <a class="btn primary" href="https://app.bitebackforpartners.at/">Zum Partner-Login</a>
+            <a class="btn secondary" href="https://biteback.at/#partner">Mehr erfahren</a>
+        </div>
+
+        <section class="apps">
+            <p>Oder direkt die App für Gastronomen laden:</p>
+            <div class="stores">
+                <a class="store" href="https://apps.apple.com/at/app/biteback-for-partners/id6777164831" target="_blank" rel="noopener">
+                    <img src="/assets/app_store.svg" alt="" width="24" height="24">
+                    Laden im App Store
+                </a>
+                <a class="store" href="https://play.google.com/store/apps/details?id=at.biteback.partner" target="_blank" rel="noopener">
+                    <img src="/assets/google_play.svg" alt="" width="24" height="24">
+                    Laden in Google Play
+                </a>
+            </div>
+        </section>
+
+        <p class="contact">Fragen? Ruf uns an: <a href="tel:+436602221451">+43 660 2221451</a></p>
+    </main>
+
+    <footer class="legal">
+        <a href="https://biteback.at/impressum.html">Impressum</a>
+        <a href="https://biteback.at/datenschutz.html">Datenschutz</a>
+        <a href="https://biteback.at/agb.html">AGB</a>
+    </footer>
+</body>
+
+</html>
